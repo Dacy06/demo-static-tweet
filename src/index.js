@@ -1,17 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function Tweet() {
+  return (
+    <div className="tweet">
+      <Avatar /> 
+      <div className="content">
+        <NameWithHandle/>
+        <Message/>
+      </div>
+    </div>
+  );
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+function Avatar(){
+  return <img
+   src="https://cdn.pixabay.com/photo/2020/07/14/15/43/church-5404699_1280.jpg"
+   className="avatar"
+   alt="avatar" />;
+}
+
+function Message(){
+  return (
+    <div className="message">
+      This is less than 140 characters.
+    </div>
+  );
+}
+
+function NameWithHandle(){
+  return (
+    <span className="name-with-handle">
+      <span className="name">Your name</span>
+      <span className="handle">@yourhandle</span>
+    </span>
+  );
+}
+
+ReactDOM.render(<Tweet />, document.querySelector('#root'));
