@@ -1,3 +1,11 @@
+A demo of practice according to book <Pure React>
+
+## Main Knowledge Points
+- props
+- arrowfunction
+- proptypes
+
+---
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
